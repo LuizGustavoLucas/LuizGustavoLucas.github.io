@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/*IMPORTAÇÃO GOOGLE FONTES */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+
+/*LAYOUT*/
+.Container {
+  margin: 0 auto;
+}
+
+.Flex {
+  display: flex;
+  justify-content: space-between;
+}
+.Flex2 {
+  display: flex;
+  align-items: center;
+}
+
+.Flex3 {
+  display: flex;
+  flex-direction: column;
+}
+.Flex7{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.Flex8{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Botao {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 700;
+  background-color: black;
+  padding: 10px 50px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 25px;
+}
+.BotaoManha{
+    background-color: deepskyblue;
+}
+
+/*TOPO DO SITE*/
+#topo {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+#logotopo {
+  max-width: 500px;
+  max-height: 125px;
+}
+
+#topofixo {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/*CABEÇALHO*/
+header {
+  height: 60px;
+}
+#logotopo {
+  width: 70px;
+  height: 70px;
+}
+#check {
+  display: none;
+}
+label {
+  font-size: 3em;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+nav ul {
+  list-style: none;
+  background-color: orangered;
+  height: 100vh;
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+#check:checked ~ ul {
+  right: 0;
+}
+
+nav ul li {
+  padding: 20px;
+  border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/*DESTAQUE*/
+main {
+  height: 75vh;
+  background: orangered;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/*DESTAQUE*/
+main h1,
+main h2 {
+  text-shadow: #0000 0.05em 0.05em 0.05em;
+}
+
+main h1 {
+  font-size: 2.5em;
+}
+main h2 {
+  font-size: 1em;
+  margin: 20px 0px 50px 0px;
+}
+
+/*Sobre*/
+#sobre {
+  padding: 50px 0px;
+  background: orangered;
+  background-size: cover;
+  background-position: center;
+}
+#destaqueSobre {
+  display: none;
+}
+#textoSobre {
+  color: white;
+  padding: 0px 10px;
+}
+#textoSobre h2 {
+  margin-bottom: 10px;
+}
+
+.TopicosSobre {
+  margin-top: 20px;
+}
+
+.TopicosSobre img {
+  margin-right: 10px;
+}
+
+/*One Page*/
+#onepage {
+  padding: 50px 10px;
+}
+
+#onepage h2 {
+  margin-bottom: 10px;
+}
+#onepage p {
+  margin-bottom: 25px;
+}
+
+#video iframe {
+  width: 340px;
+  height: 191px;
+  border: 0;
+}
+
+/*Wireframe*/
+#wireframe{
+    padding: 50px 0px;
+    background: orangered;
+    background-position: center;
+}
+
+#textoWire{
+    color: white;
+    padding: 0px 10px;
+}
+#textoWire h2{
+    margin-bottom: 10px;    
+}
+#textoWire p{
+    margin-bottom: 40px;
+}
+#textoWire span{
+    display: none;
+}
+
+#qrcodeManha{
+    display: none;
+}
+#qrcodeNoturno{
+    display: none;
+}
+.Botao{
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/*Rodape*/
+address{
+    padding: 35px 10px 50px 10px;
+    background-color: orangered;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+address a{
+    text-decoration: none;
+    color: white; 
+}
+
+address img{
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+#iconLocal{
+    display: none;
+}
+#dados{
+    margin: 30px 0px 15px 0px;
+}
+#googleMaps{
+    display: none;
+}
+footer{
+    padding: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#social{
+    margin-bottom: 25px;
+}
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 576px) {
+  /*LAYOUT*/
+  .Container {
+    max-width: 540px;
+  }
+
+  /*DESTAQUE*/
+  main h1,
+  main h2 {
+    text-shadow: #0000 0.05em 0.05em 0.05em;
+  }
+  .Botao {
+    padding: 10px 140px;
+    text-align: center;
+  }
+
+  /*One Page*/
+  #video iframe {
+    width: 560px;
+    height: 315px;
+  }
+  /*Rodape*/
+  .Flex8{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #social{
+    margin: 0;
+  }
+}
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 768px) {
+  /*LAYOUT*/
+  .Container {
+    max-width: 720px;
+  }
+  /*DESTAQUE*/
+  main {
+    height: 45vh;
+  }
+  main h1 {
+    font-size: 5.5em;
+  }
+  main h2 {
+    font-size: 2em;
+  }
+  .Botao {
+    padding: 10px 220px;
+    text-align: center;
+  }
+}
+
+/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+  /*LAYOUT*/
+  .Container {
+    max-width: 960px;
+  }
+  /*DESTAQUE*/
+  main {
+    height: 70vh;
+  }
+  .Botao {
+    padding: 10px 320px;
+    text-align: center;
+  }
+}
+
+/* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1200px) {
+  /*LAYOUT*/
+  .Container {
+    max-width: 1140px;
+  }
+  /*CABEÇALHO*/
+  header {
+    height: 120px;
+  }
+  #logotopo {
+    width: 125px;
+    height: 125px;
+    margin-top: 10px;
+  }
+  label {
+    display: none;
+  }
+  .Botao {
+    padding: 10px 180px;
+    text-align: center;
+        
+  }
+  .BotaoPDF{
+    padding: 10px 470px;
+  }
+  nav ul {
+    position: static;
+    height: auto;
+    background-color: transparent;
+    margin-top: 50px;
+  }
+  nav ul li {
+    float: left;
+    border: 0;
+  }
+  nav ul li a {
+    color: #343538;
+  }
+  nav ul li a:hover {
+    color: white;
+    background-color: orangered;
+    padding: 5px;
+    transition: all 0.3s;
+    border-radius: 50px;
+  }
+
+  /*DESTAQUE*/
+  main h1,
+  main h2 {
+    text-shadow: #0000 0.05em 0.05em 0.05em;
+  }
+
+  /*Sobre*/
+  #sobre {
+    background-attachment: fixed;
+  }
+  #destaqueSobre {
+    display: inline;
+  }
+
+  #destaqueSobre img {
+    border-radius: 50%;
+    margin-right: 50px;
+  }
+
+  /*One page*/
+
+  .Flex3 {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  /*Wireframe*/
+  #wireframe{
+    background-attachment: fixed;
+  }
+  /*Rodape*/
+  #iconLocal{
+    display: inline;
+  }
+  #iconMapa{
+    display: none;
+  }
+  #googleMaps{
+    display: inline;
+  }
+  .Flex7{
+    flex-direction: row-reverse;
+  }
+}
